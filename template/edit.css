@@ -1,0 +1,125 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Full layout */
+body {
+  display: flex;
+  height: 100vh;
+  background: #f5f6fa;
+  color: #333;
+  overflow: hidden; /* Prevent extra scrollbars */
+}
+
+/* Sidebar */
+.leftContainer {
+  width: 80px;
+  background: #1e1e2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: fixed; /* Always visible */
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.leftContainer nav ul {
+  list-style: none;
+}
+
+.leftContainer nav a {
+  display: block;
+  color: #bbb;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px 0;
+  transition: 0.3s ease;
+}
+
+.leftContainer nav a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Main content */
+.rightContainer {
+  margin-left: 80px; /* Space for fixed sidebar */
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #f9f9f9, #e9ebf1);
+}
+
+.rightContainer h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #1e1e2f;
+  font-weight: 600;
+}
+
+/* File input */
+.rightContainer input[type="file"] {
+  display: block;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rightContainer input[type="file"]:hover {
+  border-color: #0078ff;
+}
+
+/* Canvas */
+.rightContainer canvas {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 20px auto;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  margin: 15px 10px 25px 0;
+  border: none;
+  border-radius: 8px;
+  background: #0078ff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #005fcc;
+  transform: translateY(-2px);
+}
+
+/* Preview section */
+.rightContainer h2 {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #444;
+}
+
+#preview {
+  margin-top: 12px;
+  max-width: 400px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
